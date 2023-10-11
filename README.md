@@ -92,17 +92,49 @@ The details of working :
 This file contains decloration and definition buffer_type.
 
 
-
 -------------------------------
 The tests :
 -------------------------------
 
+	For tests I used the framework called "googletest".
+ I made the tests for reading data and writing data via my buffer with the filter and without it.
+ - You can see they in this directory: /tests/reading_gtest.cpp or writing_gtest.cpp.
+ I also made the test for create the buffer.
+- You can see it in this directory: "/tests/constructor_gtest.cpp".
+
+	The files such as "/tests/fixture_gtest.cpp" and "/tests/fixture_gtest.hpp" just contain useful stuf for testing.
+If you need more information about it - you can see these files.
+The results of testing present on a picture: /tests/TheResult.PNG
 
 -------------------------------
 The building :
 -------------------------------
 
+	So, I used in this progect the autotools for the building. 
+ If you need to build this projects that to test it or to run the example you can use it.
+ The steps for it:
+- to make directory for building in the project-dir;
+- to go to this directory;
+- to run the script "./configure" from current directory. It's very important;
+- to wait while the broject will be built;
+- to run make utility in the current directory.
+For example:
+- mkdir build;
+- cd build;
+- ../configure;
+- make;
+- cd example;
+- ./example.
 
+	These steps are enough for the build of example.
+
+	If you need to build the tests, you need to run make with keys -check.
+This command build the tests and run they.
+See the result: ./tests/TheResult.PNG
+If you need to run it again you can use the comand make -check_TESTS
+For example:
+- make check;
+- make -check-TESTS.
 -------------------------------
 How do you need to use it in your programm ?
 -------------------------------
