@@ -139,6 +139,7 @@ For example:
 How do you need to use it in your programm ?
 -------------------------------
 	So, the answer to this question is located in the directory : "/example".
+ You can include the header file with buffer_type "/include/buffer_type.hpp"
 
 1) ./example/fFilter_example.hpp - this file contains all the necessary for using:
 	- #include "buffer_type.hpp" - for declaration and defininition of buffer_type < char_type >;
