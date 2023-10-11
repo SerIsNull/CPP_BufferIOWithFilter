@@ -1,21 +1,19 @@
 # CPP_BufferIOWithFilter
 
-===============================
+-------------------------------
 Description :
-===============================
-	The class buffer_type may be used for input/output operations,
-i.e. for writing or reading data. 
+-------------------------------
+	The class buffer_type may be used for input/output operations, i.e. for writing or reading data. 
 
-===============================
+-------------------------------
 The feature :
-===============================
-	This class allows the user to define his own a data-filter.
+-------------------------------
+	This class allows that the user to define his own a data-filter.
 
-================================
+-------------------------------
 The structure of this type :
-================================
-	This type is inherited from std::basic_streambuf <char_type>.
-In this way, this type is used such members as:
+-------------------------------
+	This type is inherited from std::basic_streambuf <char_type>. In this way, this type is used such members as:
 
 	Inherted form std::basic_streambuf<char_type>
 
@@ -44,9 +42,9 @@ In this way, this type is used such members as:
 
 	- is_clean_up_mess() - for show errors. It tries to clear and up;
 
-===================================
+-------------------------------
 How does it work for reading data ?
-===================================
+-------------------------------
 
 1) An object of buffer is created;
 2) It joins to inputstream;
@@ -65,9 +63,9 @@ Source file  -> Buffer -> Filter -> Data storage
 Source file  -> Buffer -> Data storage
 
 
-===================================
+-------------------------------
 How does it work for writing data ?
-===================================
+-------------------------------
 
 1) An object of buffer is created;
 2) It joins to outputstream;
@@ -81,45 +79,44 @@ then the function xsputn() is called;
 
 The scheme for it:
 
-	with filter:
-Data storage -> Buffer -> Filter -> Destination file
+with filter 
+	Data storage -> Buffer -> Filter -> Destination file
 
-	without filter:
-Data storage -> Buffer -> Destination file
+without filter
+	Data storage -> Buffer -> Destination file
 
-==================================
+-------------------------------
 The details of working : 
-==================================
-	If you would like to get more information about working
-of buffer_type, you may see "include/buffer_type.hpp".
+-------------------------------
+	If you would like to get more information about working of buffer_type, you may see "include/buffer_type.hpp".
 This file contains decloration and definition buffer_type.
 
 
 
-==================================
+-------------------------------
 The tests :
-==================================
+-------------------------------
 
 
-==================================
+-------------------------------
 The building :
-==================================
+-------------------------------
 
 
-==================================
+-------------------------------
 How do you need to use it in your programm ?
-==================================
+-------------------------------
 	So, the answer to this question is located in the directory : "/example".
 
 1) ./example/fFilter_example.hpp - this file contains all the necessary for using:
-	1) #include "buffer_type.hpp" - for declaration and defininition of buffer_type < char_type >;
-	2) The namesapce "example" - for usability;
-	3) The function of user's filter.
+	- #include "buffer_type.hpp" - for declaration and defininition of buffer_type < char_type >;
+	- The namesapce "example" - for usability;
+	- The function of user's filter.
 
 2) ./example/fFilter_example.cpp - this file contains the definition of user's filter.
 
 3) ./example/main_example.cpp - this file contains the using buffer_type for operatins such as:
-	1) for reading;
-	2) for writing;
+	- for reading;
+	- for writing;
 
 
