@@ -118,10 +118,13 @@ The building :
 - to run the script "./configure" from current directory. It's very important;
 - to wait while the broject will be built;
 - to run make utility in the current directory.
+Plese, remember, if you need to do it again after the changes you'll need to copy
+/examples and /tests into the directory "autotools"
 For example:
 - mkdir build;
+- cp -pr examples ./autotools/ && cp -pr tests ./autotools/ && cp -pr include ./autotools/ 
 - cd build;
-- ../configure;
+- ../autotools/./configure;
 - make;
 - cd example;
 - ./example.
