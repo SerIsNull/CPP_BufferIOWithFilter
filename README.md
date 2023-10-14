@@ -8,7 +8,7 @@ Description :
 -------------------------------
 The feature :
 -------------------------------
-	This class allows that the user to define his own a data-filter.
+	This class allows the user to define his own data-filter.
 
 -------------------------------
 The structure of this type :
